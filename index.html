@@ -1,8 +1,8 @@
 <html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>Ольга</title><style> 
-    body {background:linear-gradient(to top left, powderblue, pink);
-         width:95%;
-         padding:20px}
+	<title>Ольга</title>
+    <style>
+    html {background:lightgrey;} 
+    body {width:100%; max-width:1200px; margin:20px auto; background:linear-gradient(to top left, powderblue, pink); padding:20px;}
     h1, h2 {text-align:center;
            font-family:sans-serif}
     h1 {text-transform:uppercase;
@@ -17,13 +17,29 @@
     table {background-color:#F0F8FF;}
     a:hover {color:violet;}
     .center {display:block; margin-left:auto; margin-right:auto;}
+    .first {background-color:grey;color: white;}
+    .second {background-color: lightpink;}
+    .inline {display: inline-block; color: white;}
+    .maroon {background-color:maroon;}
+    .red {background-color: red;}
+    .salmon {background-color: salmon;}
+    .invisible {display:none;}
+    .flex-container {display: flex; font-size: 30px; flex-wrap: wrap; width: 270px; border: 2px solid indigo;}
+    .item {border: 1px solid darksalmon;  padding: 20px;}
+    .item1 {width: 270px;  height: 100px;  border: 2px solid indigo;}
+    .relative {position: relative;  top: -20px;  left: 20px;}
+    .absolute {position: absolute;}
+    .container {height:400; width:800; display:flex; flex-direction:row; justify-content:space-around; flex-wrap:wrap}
+    .button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8 {width:150px; height:auto; margin:20px; border:3px solid indigo; border-radius:25px; font-size:30px; text-align:center;}
+    .button1, .button3, .button5, .button7 {background-color:#FFCCCC;}
+    .button2, .button4, .button6, .button8 {background-color:#CCFFFF;}
 </style>
   </head>
   <body>
     	  <h1>Ольга</h1>
 	  <h2>Немного о себе</h2>
-	  <p>Меня зовут Ольга. Живу в г. Улан-Удэ, работаю в сфере ВЭД. Сейчас учусь у Арсалана Рабданова. Этот сайт  - мой первый опыт. На этот курс савлю себе цель разобраться в мире web-разработки, влюбиться в нее и овладеть новыми навыками, которые будут полезны.</p>
-          <h3><a href="https://export03.ru/">Тут можно ознакомиться с тем, чем я занимаюсь</a></h3>
+	  <p>Меня зовут Ольга. Живу в г. Улан-Удэ, работаю в сфере ВЭД. Сейчас учусь у Арсалана Рабданова. Этот сайт  - мой первый опыт. На этот курс ставлю себе цель разобраться в мире web-разработки, влюбиться в нее и овладеть новыми навыками, которые будут полезны.</p>
+          <p><a href="https://export03.ru/">Тут можно ознакомиться с тем, чем я занимаюсь</a></p>
 <img src="https://celes.club/uploads/posts/2022-06/thumbs/1654363080_6-celes-club-p-oboi-na-rabochii-stol-ofisnie-krasivie-7.jpg" width="500" height="335" align="texttop" alt="Мое изображение" class="center">
           <h2>Основы HTML</h2>
 <p>Задание, которое нужно было выполнить, сформулировано <a href="https://rabdanov.notion.site/3-HTML-ebe60a2244c04698bc1e3d65aa84336f"> тут</a></p>
@@ -49,7 +65,8 @@
     text-shadow</li>
 <li style="background-image:url(https://foto-oboi-store.ru/image/maxresizer.php?width=805&amp;src=catalog/data/product_6962.jpg)">
     background-image</li></ul>
-<h3 id="myname"> Некоторые из свойств CSS: </h3><table>
+<h3> Некоторые из свойств CSS: </h3>
+<table id="myname">
     <thead>
 <tr>
 	<th>Наименование</th>
@@ -82,6 +99,68 @@
 <a href="https://puzzleweb.ru/css/all_properties.php">еще один Справочник CSS</a>
 <h2>CSS позиционирование</h2>
 <p>Задание для выполнения можно посмотреть по <a href="https://rabdanov.notion.site/5-CSS-2a2027b9bace4cac94c53623b57f9ffb">ссылке</a></p>
+<h3>1. Базовый поток</h3>
+<div class="first">
+    <div>Обычный базовый элемент</div>
+    <div class="second">Второй базовый элемент, но с другими характеристиками </div>
+  </div>
+<h3>2. Свойство <mark>display</mark>. Свойство, влияющее на положение элемента.</h3>
+<h4>2.1. display:block</h4>
+<p>Располагается абсолютно также, что и базовый поток, показанный в п.1 этого раздела.</p>
+<h4>2.2. display:inline-block</h4>
+<div>
+    <div class="inline maroon">
+      Первый блок
+    </div>
+    <div class="inline red">
+      Второй блок
+    </div>
+  <div class="inline salmon">
+      Третий блок
+  </div>
+  </div>
+<h4>2.3. display:none</h4>
+<div> Невидимый блок
+    <div class="invisible"> БЛОК </div>
+</div>
+<h4>2.4. display:flex</h4>
+<div class="flex-container">
+    <div class="item">F</div>
+    <div class="item">L</div>
+    <div class="item">E</div>
+    <div class="item">X</div>
+    <div class="item">B</div>
+    <div class="item">O</div>
+    <div class="item">X</div>
+  </div>
+<h4>2.5. display:grid</h4>
+<p>Большой и интересный раздел, который будет позже</p>
+<h3>3. Свойство <mark>position</mark>. Свойство, позволяющее выдернуть элемент из потока.</h3>
+<h4>3.1. position: static</h4>
+<h4>3.2.position: relative</h4>
+<div>
+    <div class="item1"> статичный </div>
+    <div class="item1 relative"> относительный </div>
+    <div class="item1"> статичный </div>
+  </div>
+<h4>3.3. position: absolute</h4>
+<div>
+    <div class="item1"> статичный </div>
+    <div class="item1 absolute"> абсолютный </div>
+    <div class="item1"> статичный </div>
+  </div>
+<h4>3.4. position: fixed</h4>
+<h3>4. FLEX-контейнер</h3>
+<div class="container">
+    <div class="button1">1</div>
+    <div class="button2">2</div>
+    <div class="button3">3</div>
+    <div class="button4">4</div>
+    <div class="button5">5</div>
+    <div class="button6">6</div>
+    <div class="button7">7</div>
+    <div class="button8">8</div>
+</div>
 <h2>Впереди еще много интересного!</h2>
 <address>
 Ищите меня здесь:<br>

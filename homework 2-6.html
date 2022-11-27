@@ -25,9 +25,10 @@
     .invisible {display:none;}
     .flex-container {display: flex; font-size: 30px; flex-wrap: wrap; width: 270px; border: 2px solid indigo;}
     .item {border: 1px solid darksalmon;  padding: 20px;}
+    .box {position:relative;}
     .item1 {width: 270px;  height: 100px;  border: 2px solid indigo;}
-    .relative {position: relative;  top: -20px;  left: 20px;}
-    .absolute {position: absolute;}
+    .item2 {position: relative;  top: -20px;  left: 10px; width:270px; height:100px; border:2px solid indigo;}
+    .item3 {position: absolute; top:50px; left:40px; width:270px; height:100px; border:2px solid indigo;}
     .container {height:400; width:800; display:flex; flex-direction:row; justify-content:space-around; flex-wrap:wrap}
     .button1, .button2, .button3, .button4, .button5, .button6, .button7, .button8 {width:150px; height:auto; margin:20px; border:3px solid indigo; border-radius:25px; font-size:30px; text-align:center;}
     .button1, .button3, .button5, .button7 {background-color:#FFCCCC;}
@@ -144,16 +145,16 @@
 <h4>3.1. position: static</h4>
 <h4>3.2.position: relative</h4>
 <div>
-    <div class="item1"> статичный </div>
-    <div class="item1 relative"> относительный </div>
-    <div class="item1"> статичный </div>
-  </div>
+  <div class="item1"> статичный </div>
+  <div class="item2"> относительный </div>
+  <div class="item1"> статичный </div>
+</div>
 <h4>3.3. position: absolute</h4>
-<div>
-    <div class="item1"> статичный </div>
-    <div class="item1 absolute"> абсолютный </div>
-    <div class="item1"> статичный </div>
-  </div>
+<div class="box">
+  <div class="item1"> статичный </div>
+  <div class="item3"> абсолютный </div>
+  <div class="item1"> статичный </div>
+</div>
 <h4>3.4. position: fixed</h4>
 <h3>4. FLEX-контейнер</h3>
 <div class="container">

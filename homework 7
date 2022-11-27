@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF=8">
+    <script src="script.js"></script>
+    <title>Ольга. Обо мне JS</title>
+    <style>
+      h1, h2 {text-align: center;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;}
+      body {background: #FFFFF0;}
+    </style>
+  </head>
+<body>
+  <h1>Домашнее задание №7. Основы JavaScript. Типы данных. Базовые математические операции.</h1>
+  <h2>Обо мне</h2>
+</body>
+</html>
